@@ -5,8 +5,8 @@ library(treemap)
 library(dplyr)
 
 # Specify the path to your CSV file
-#file_path <- "/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Data.csv"
-file_path <- "https://raw.githubusercontent.com/info-201b-sp24/exploratory-analysis-arnmoh18/main/Data.csv"
+file_path <- "/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Data.csv"
+#file_path <- "https://raw.githubusercontent.com/info-201b-sp24/exploratory-analysis-arnmoh18/main/Data.csv"
 
 # Load the CSV file
 df <- read.csv(file_path)
@@ -36,6 +36,3 @@ treemap(df_top_countries,
         title = "Food Waste by Commodity in Top 4 Countries",
         palette = "Dark2")
 
-# Print purpose and observations
-cat("Purpose of the chart: This treemap visualizes the total food waste by commodity for the top 4 countries with the most waste. The size of each box represents the total loss of each commodity in each country.\n")
-cat("Notable observations: From this map we can tell that from the 4 countries with the most waste in the dataset, we can tell how an environment can impact the type of commodities wasted. We can see Mexico has a lot of dairy and meat waste likely due to its hot weather. Pakistan seems to loose a lot of fruits and vegetables due to their heat. ")
