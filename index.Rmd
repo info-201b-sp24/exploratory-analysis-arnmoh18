@@ -136,7 +136,7 @@ Through aggregating the data by year, we are able to gain insights on food waste
 
 ### Chart 3
 
-```{r chart2, echo=FALSE}
+```{r chart3, echo=FALSE}
 source("Barplot.R")
 ggplot(commodities_grouped_df, aes(x = commodity, y = average_loss_percent)) +
   geom_col() +
