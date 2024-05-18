@@ -103,10 +103,6 @@ kable(max_loss_by_country_commodity) %>%
 
 ### Chart 1
 
-Purpose of the chart: This tree map visualizes the total food waste by commodity for the top 4 countries with the most waste. The size of each box represents the total loss of each commodity in each country.
-
-From this map we can tell that from the 4 countries with the most waste in the data set, we can tell how an environment can impact the type of commodities wasted. We can see Mexico has a lot of dairy and meat waste likely due to its hot weather. Pakistan seems to loose a lot of fruits and vegetables due to their heat.
-
 ```{r chart1, echo=FALSE}
 source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Food_waste_TreeMap.R")
 treemap(df_top_countries,
@@ -116,6 +112,11 @@ treemap(df_top_countries,
         palette = "Dark2")
 ```
 
+### Purpose
+This tree map visualizes the total food waste by commodity for the top 4 countries with the most waste. The size of each box represents the total loss of each commodity in each country.
+
+### Insights
+From this map we can tell that from the 4 countries with the most waste in the data set, we can tell how an environment can impact the type of commodities wasted. We can see Mexico has a lot of dairy and meat waste likely due to its hot weather. Pakistan seems to loose a lot of fruits and vegetables due to their heat.
 ### Chart 2
 
 ```{r chart2, echo=FALSE}
@@ -123,13 +124,24 @@ source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Line Plot Foo
 plot(g1 + labs(title="Year vs Food Loss", y="Percent Loss (%)", x="Year", caption="Demo"))
 ```
 
-Include a chart
+### Purpose
+Through aggregating the data by year, we are able to gain insights on food waste trends over a given time period
 
-Describe why you chose this chart and what information it reveals
+### Insights
+-From 2008 to 2013 there was an increase in food waste hovering around 5.5-6 percent
+-There was a sharp increase in food waste in 2020
+  -This was most likely because of the strike of pandemic that happened around that time. Covid caused the mass shut down of restaurants leading to a mass turnover of food waste
+
 
 ### Chart 3
 
-Include a chart
+```{r chart2, echo=FALSE}
+source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Line Plot Food Waste.R")
+plot(g1 + labs(title="Year vs Food Loss", y="Percent Loss (%)", x="Year", caption="Demo"))
+```
 
-Purpose of this barplot: We were curious as to what commodities specifically were experiencing the highest loss percentages (irregardless of location or year) as well as if there is a significant difference in the top three percentages for commodities. These percentages are based on food produced and food lost after production somewhere in the process of the preparation and distribution of the produced commodities (harvesting, storing, drying, transporting, winnowing, etc) and the combination of these percentages with commodities will help us to answer questions such as what the highest average food loss percentages are, what commodities are wasted most and several other questions regarding commodities and their losses post-production.
-Insights: Simply looking at the fact that the top three commodities are foods that are not too common. Grapefruit juice, meat of the pig w/the bone, and snails (in various forms excluding sea snails), are not foods that are typically eaten on a day to day. This alone suggests not only that these foods are less desired, but also that expectations prior to production were much higher than they turned out to be. All three of these commodities have around a 40-50% average food loss meaning a large portion of these commodities being produced were not accurately produced in scale due to some miscalculation when determining how much to produce.
+### Purpose
+We were curious as to what commodities specifically were experiencing the highest loss percentages (irregardless of location or year) as well as if there is a significant difference in the top three percentages for commodities. These percentages are based on food produced and food lost after production somewhere in the process of the preparation and distribution of the produced commodities (harvesting, storing, drying, transporting, winnowing, etc) and the combination of these percentages with commodities will help us to answer questions such as what the highest average food loss percentages are, what commodities are wasted most and several other questions regarding commodities and their losses post-production.
+
+### Insights
+Simply looking at the fact that the top three commodities are foods that are not too common. Grapefruit juice, meat of the pig w/the bone, and snails (in various forms excluding sea snails), are not foods that are typically eaten on a day to day. This alone suggests not only that these foods are less desired, but also that expectations prior to production were much higher than they turned out to be. All three of these commodities have around a 40-50% average food loss meaning a large portion of these commodities being produced were not accurately produced in scale due to some miscalculation when determining how much to produce.
