@@ -99,14 +99,16 @@ Describe why you included the table and what information it reveals
 
 ### Chart 1
 
-Purpose of the chart: This treemap visualizes the total food waste by commodity for the top 4 countries with the most waste. The size of each box represents the total loss of each commodity in each country.
+Purpose of the chart: This tree map visualizes the total food waste by commodity for the top 4 countries with the most waste. The size of each box represents the total loss of each commodity in each country.
 
-From this map we can tell that from the 4 countries with the most waste in the dataset, we can tell how an environment can impact the type of commodities wasted. We can see Mexico has a lot of dairy and meat waste likely due to its hot weather. Pakistan seems to loose a lot of fruits and vegetables due to their heat.
+From this map we can tell that from the 4 countries with the most waste in the data set, we can tell how an environment can impact the type of commodities wasted. We can see Mexico has a lot of dairy and meat waste likely due to its hot weather. Pakistan seems to loose a lot of fruits and vegetables due to their heat.
 
-```{r, echo = FALSE, code = readLines("Chart 1.R")}
+```{r , echo = FALSE, warning = FALSE, code = readLines("Food_waste_TreeMap.R")}
 ```
 
 ### Chart 2
+
+![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABH0lEQVR4XmNgGAVDCqxdvzVhzcbNm6mBK6uqVqObDwf///9nXLt+SzG6JlJxTW3tVpBZ6OajgP3797Os3bClFV0zsbiuoXEfyAx0c7GCRTt3cq9Zv7UX3RBCuL6x8TBIL7p5eMGqVbv512zYMgvdMFy4san1FEgPujlEgbVrd0gCg3EJuqHouLm59TxILbp+ksCqjdvV12zcshLdcBhuamm7BFKDro8ssGbjRr01G7aux7Ckte0qSA5dPUVg9frNDkDLNsGDq7X9GkgMXR1VwNoNm0MgPmm/DmKjy49wwLjIbzM1MLq5GIBxgc9mhm2eFGGwGYQA42wvDI2kYrAZhADjdEyNpGKwGYQA42Q3DI2kYrAZBEGfy2aq4FEw5AAASl8F3R9fQqAAAAAASUVORK5CYII= "Run All Chunks Above")
 
 Include a chart
 

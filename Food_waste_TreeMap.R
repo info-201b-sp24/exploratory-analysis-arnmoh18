@@ -35,4 +35,3 @@ treemap(df_top_countries,
         vSize = "total_loss",
         title = "Food Waste by Commodity in Top 4 Countries",
         palette = "Dark2")
-
