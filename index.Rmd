@@ -96,15 +96,16 @@ Furthermore we also looked at how food waste varied by country since location ca
 ### Table
 
 ```{r table, echo=FALSE}
-source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/AggregatedTable.R")
+source("AggregatedTable.R")
 kable(max_loss_by_country_commodity) %>%
   kable_styling(bootstrap_options = "striped", full_width = F)
 ```
+This table presents the maximum percentage loss of various commodities in different countries, indicating the challenges faced in agricultural production and food security.
 
 ### Chart 1
 
 ```{r chart1, echo=FALSE}
-source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Food_waste_TreeMap.R")
+source("Food_waste_TreeMap.R")
 treemap(df_top_countries,
         index = c("country", "commodity"),
         vSize = "total_loss",
@@ -120,7 +121,7 @@ From this map we can tell that from the 4 countries with the most waste in the d
 ### Chart 2
 
 ```{r chart2, echo=FALSE}
-source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Line Plot Food Waste.R")
+source("Line Plot Food Waste.R")
 plot(g1 + labs(title="Year vs Food Loss", y="Percent Loss (%)", x="Year", caption="Demo"))
 ```
 
@@ -136,8 +137,11 @@ Through aggregating the data by year, we are able to gain insights on food waste
 ### Chart 3
 
 ```{r chart2, echo=FALSE}
-source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Line Plot Food Waste.R")
-plot(g1 + labs(title="Year vs Food Loss", y="Percent Loss (%)", x="Year", caption="Demo"))
+source("Barplot.R")
+ggplot(commodities_grouped_df, aes(x = commodity, y = average_loss_percent)) +
+  geom_col() +
+  labs(title = "Food Loss Percentages by Commodity", x = "Commodiity (The Specified Food Wasted)", y = "Average Food Loss Percentage for this commoditity") +
+  theme(axis.text.x = element_text(colour = "#2E216B", size = 7, angle = 12.5, vjust = 1))
 ```
 
 ### Purpose
