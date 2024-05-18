@@ -117,5 +117,6 @@ Describe why you chose this chart and what information it reveals
 ### Chart 3
 
 Include a chart
+Purpose of this barplot: We were curious as to what commodities specifically were experiencing the highest loss percentages (irregardless of location or year) as well as if there is a significant difference in the top three percentages for commodities. These percentages are based on food produced and food lost after production somewhere in the process of the preparation and distribution of the produced commodities (harvesting, storing, drying, transporting, winnowing, etc) and the combination of these percentages with commodities will help us to answer questions such as what the highest average food loss percentages are, what commodities are wasted most and several other questions regarding commodities and their losses post-production.
+Insights: Simply looking at the fact that the top three commodities are foods that are not too common. Grapefruit juice, meat of the pig w/the bone, and snails (in various forms excluding sea snails), are not foods that are typically eaten on a day to day. This alone suggests not only that these foods are less desired, but also that expectations prior to production were much higher than they turned out to be. All three of these commodities have around a 40-50% average food loss meaning a large portion of these commodities being produced were not accurately produced in scale due to some miscalculation when determining how much to produce.
 
-Describe why you chose this chart and what information it reveals
