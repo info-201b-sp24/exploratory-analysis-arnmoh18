@@ -5,8 +5,8 @@ library(treemap)
 library(dplyr)
 
 # Specify the path to your CSV file
-file_path <- "/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Data.csv"
-#file_path <- "https://raw.githubusercontent.com/info-201b-sp24/exploratory-analysis-arnmoh18/main/Data.csv"
+#file_path <- "/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Data.csv"
+file_path <- "https://raw.githubusercontent.com/info-201b-sp24/exploratory-analysis-arnmoh18/main/Data.csv"
 
 # Load the CSV file
 df <- read.csv(file_path)
@@ -30,8 +30,3 @@ df_top_countries <- df %>%
   summarise(total_loss = sum(loss_quantity, na.rm = TRUE))
 
 # Create treemap
-treemap(df_top_countries,
-        index = c("country", "commodity"),
-        vSize = "total_loss",
-        title = "Food Waste by Commodity in Top 4 Countries",
-        palette = "Dark2")

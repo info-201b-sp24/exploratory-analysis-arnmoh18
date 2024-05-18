@@ -37,3 +37,4 @@ g1= ggplot(data = year_avg, aes(x=year, y=loss_per_avg)) +
   geom_line() +
   geom_point()
 g1 + labs(title="Year vs Food Loss", y="Percent Loss (%)", x="Year", caption="Demo")
+

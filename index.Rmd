@@ -89,13 +89,17 @@ Assuming you answer your research questions, briefly describe the expected or po
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+When looking at the data we first decided to take a look at what type of food had the highest and lowest rate of food waste since that can effect the amount of food waste. We noticed that the foods with the highest amount of food waste were broccoli, cauliflowers, and strawberries at 65 percent. Furthermore we also noticed that the food with the lowest amount of food waste turned out to be goats at 0.12 percent.
+
+Furthermore we also looked at how food waste varied by country since location can have a high influence on food waste. The country with the smallest amount of food waste was Burkina Faso, and the country with the largest amount of food waste was Australia.
 
 ### Table
 
-Include a table of aggregate information
-
-Describe why you included the table and what information it reveals
+```{r table, echo=FALSE}
+source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/AggregatedTable.R")
+kable(max_loss_by_country_commodity) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
 
 ### Chart 1
 
@@ -103,12 +107,21 @@ Purpose of the chart: This tree map visualizes the total food waste by commodity
 
 From this map we can tell that from the 4 countries with the most waste in the data set, we can tell how an environment can impact the type of commodities wasted. We can see Mexico has a lot of dairy and meat waste likely due to its hot weather. Pakistan seems to loose a lot of fruits and vegetables due to their heat.
 
-```{r , echo = FALSE, warning = FALSE, code = readLines("Food_waste_TreeMap.R")}
+```{r chart1, echo=FALSE}
+source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Food_waste_TreeMap.R")
+treemap(df_top_countries,
+        index = c("country", "commodity"),
+        vSize = "total_loss",
+        title = "Food Waste by Commodity in Top 4 Countries",
+        palette = "Dark2")
 ```
 
 ### Chart 2
 
-![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAABH0lEQVR4XmNgGAVDCqxdvzVhzcbNm6mBK6uqVqObDwf///9nXLt+SzG6JlJxTW3tVpBZ6OajgP3797Os3bClFV0zsbiuoXEfyAx0c7GCRTt3cq9Zv7UX3RBCuL6x8TBIL7p5eMGqVbv512zYMgvdMFy4san1FEgPujlEgbVrd0gCg3EJuqHouLm59TxILbp+ksCqjdvV12zcshLdcBhuamm7BFKDro8ssGbjRr01G7aux7Ckte0qSA5dPUVg9frNDkDLNsGDq7X9GkgMXR1VwNoNm0MgPmm/DmKjy49wwLjIbzM1MLq5GIBxgc9mhm2eFGGwGYQA42wvDI2kYrAZhADjdEyNpGKwGYQA42Q3DI2kYrAZBEGfy2aq4FEw5AAASl8F3R9fQqAAAAAASUVORK5CYII= "Run All Chunks Above")
+```{r chart2, echo=FALSE}
+source("/Users/arnav/Desktop/INFO201/exploratory-analysis-arnmoh18/Line Plot Food Waste.R")
+plot(g1 + labs(title="Year vs Food Loss", y="Percent Loss (%)", x="Year", caption="Demo"))
+```
 
 Include a chart
 
@@ -118,4 +131,5 @@ Describe why you chose this chart and what information it reveals
 
 Include a chart
 
-Describe why you chose this chart and what information it reveals
+Purpose of this barplot: We were curious as to what commodities specifically were experiencing the highest loss percentages (irregardless of location or year) as well as if there is a significant difference in the top three percentages for commodities. These percentages are based on food produced and food lost after production somewhere in the process of the preparation and distribution of the produced commodities (harvesting, storing, drying, transporting, winnowing, etc) and the combination of these percentages with commodities will help us to answer questions such as what the highest average food loss percentages are, what commodities are wasted most and several other questions regarding commodities and their losses post-production.
+Insights: Simply looking at the fact that the top three commodities are foods that are not too common. Grapefruit juice, meat of the pig w/the bone, and snails (in various forms excluding sea snails), are not foods that are typically eaten on a day to day. This alone suggests not only that these foods are less desired, but also that expectations prior to production were much higher than they turned out to be. All three of these commodities have around a 40-50% average food loss meaning a large portion of these commodities being produced were not accurately produced in scale due to some miscalculation when determining how much to produce.
