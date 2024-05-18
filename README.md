@@ -2,7 +2,8 @@
 
 ### Authors
 
-Arnav Mohan (arnmoh18@uw.edu), Alex Hsu (ahsu4@uw.edu), Mohamed Aden (moaden@uw.edu) 
+Arnav Mohan (arnmoh18@uw.edu), Alex Hsu (ahsu4@uw.edu), Mohamed Aden (moaden@uw.edu)
+https://info-201b-sp24.github.io/exploratory-analysis-arnmoh18/
 ### Date
 
 May 1, 2024
